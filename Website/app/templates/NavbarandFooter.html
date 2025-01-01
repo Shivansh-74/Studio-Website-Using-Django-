@@ -1,0 +1,345 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% tailwind_css %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+  *{
+    margin: 0;padding: 0;
+  }
+        .nav{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='400' preserveAspectRatio='none' viewBox='0 0 1440 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1166%26quot%3b)' fill='none'%3e%3crect width='1440' height='400' x='0' y='0' fill='url(%26quot%3b%23SvgjsRadialGradient1167%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1440 0L987.05 0L1440 160.43z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M987.05 0L1440 160.43L1440 269.49L815.3399999999999 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M815.34 0L1440 269.49L1440 295.3L776.95 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M776.95 0L1440 295.3L1440 342.47L380.58000000000004 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 400L584.82 400L0 231.62z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 231.62L584.82 400L668.47 400L0 167.78z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 167.78L668.47 400L1117.27 400L0 163.62z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 163.62L1117.27 400L1154.98 400L0 81.55000000000001z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1166'%3e%3crect width='1440' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='0%25' r='823.65' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1167'%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.29'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.4'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.52'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.99'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.99'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+        }
+        .footer{
+            
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='400' preserveAspectRatio='none' viewBox='0 0 1440 400'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1166%26quot%3b)' fill='none'%3e%3crect width='1440' height='400' x='0' y='0' fill='url(%26quot%3b%23SvgjsRadialGradient1167%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1440 0L987.05 0L1440 160.43z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M987.05 0L1440 160.43L1440 269.49L815.3399999999999 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M815.34 0L1440 269.49L1440 295.3L776.95 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M776.95 0L1440 295.3L1440 342.47L380.58000000000004 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 400L584.82 400L0 231.62z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 231.62L584.82 400L668.47 400L0 167.78z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 167.78L668.47 400L1117.27 400L0 163.62z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 163.62L1117.27 400L1154.98 400L0 81.55000000000001z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1166'%3e%3crect width='1440' height='400' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='0%25' r='823.65' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1167'%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.18'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.29'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.4'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.52'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.89'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.99'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.99'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+        }
+        .home-bg{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='20000' preserveAspectRatio='none' viewBox='0 0 1440 20000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='20000' x='0' y='0' fill='url(%26quot%3b%23SvgjsRadialGradient1007%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1440 0L1093.9 0L1440 3813.34z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1093.9 0L1440 3813.34L1440 4108.35L530.6800000000001 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M530.68 0L1440 4108.35L1440 11306.1L358.0899999999999 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M358.0899999999999 0L1440 11306.1L1440 14134.95L311.13999999999993 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 20000L547.82 20000L0 18015.29z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 18015.29L547.82 20000L1034.33 20000L0 15189.880000000001z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 15189.880000000001L1034.33 20000L1259.46 20000L0 5910.85z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 5910.8499999999985L1259.46 20000L1301.1100000000001 20000L0 4626.059999999999z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='20000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='0%25' cy='50%25' r='10103.15' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1007'%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.99'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.99'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+          }
+          .gradient-text {
+              background-image: linear-gradient(90deg, rgb(244, 65, 65),rgb(240, 240, 156), #d75e5e); /* Define your gradient */
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text; /* Fallback for non-webkit browsers */
+              color: transparent;
+          }
+          .slider-container {
+              overflow: hidden;
+              position: relative;
+              width: 100%;
+            
+              
+            }
+        
+            .slider {
+              display: flex;
+              gap: 1rem;
+              animation: scroll 100s linear infinite;
+            }
+        
+            .slider img {
+              transition: transform 0.7s ease-in-out;
+              transition-duration: 2s;
+              border-radius: 5%; /* Added border-radius to images */
+              margin: 20px;
+              scale: 0.9;
+              
+              height: 350px;
+            }
+        
+            .slider img.center {
+              transform: scale(1.1);
+            }
+        
+            @keyframes scroll {
+              0% {
+                transform: translateX(0);
+              }
+              20% {
+                transform: translateX(-25%);
+              }
+              40% {
+                transform: translateX(-50%);
+              }
+              60% {
+                transform: translateX(-75%);
+              }
+              80% {
+                transform: translateX(-100%);
+              }
+              100% {
+                transform: translateX(-125%);
+              }
+            }
+            .card{
+              background: #0000005a;
+              cursor: pointer;
+            }
+            .card:hover{
+              background: #00000037;
+            }
+            .card:hover svg{
+           color: red;
+            }
+            .about {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='10000' preserveAspectRatio='none' viewBox='0 0 1440 10000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1290%26quot%3b)' fill='none'%3e%3crect width='1440' height='10000' x='0' y='0' fill='url(%26quot%3b%23SvgjsRadialGradient1291%26quot%3b)'%3e%3c/rect%3e%3cpath d='M1440 0L1117.48 0L1440 2970.63z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M1117.48 0L1440 2970.63L1440 6819.3L894.39 0z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M894.39 0L1440 6819.3L1440 6823.52L595.26 0z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M595.26 0L1440 6823.52L1440 7151.42L386.48 0z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M0 10000L168.19 10000L0 5286.49z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M0 5286.49L168.19 10000L743.71 10000L0 4897.17z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M0 4897.17L743.71 10000L916.21 10000L0 4209.58z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M0 4209.58L916.21 10000L1046.6 10000L0 2952.51z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1290'%3e%3crect width='1440' height='10000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='100%25' r='10025.89' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1291'%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.12'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.53'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.95'%3e%3c/stop%3e%3cstop stop-color='rgba(25%2c 25%2c 25%2c 1)' offset='0.95'%3e%3c/stop%3e%3c/radialGradient%3e%3c/defs%3e%3c/svg%3e");
+            }
+            .input {
+                border-bottom: 1px solid gray;
+                outline: none;
+                background: #00000000;
+                
+            }
+            .gallery img:hover{
+              scale: 1.03;
+              cursor: pointer;
+              transition-duration: 400ms;
+              box-shadow: 0 0 0 10px grayk;
+            }
+            #studio{
+              background-image: linear-gradient( rgb(255, 0, 0),rgb(228, 157, 157), #ffffff); /* Define your gradient */
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text; /* Fallback for non-webkit browsers */
+              color: transparent;            }
+            #laxmi{
+              background-image: linear-gradient( rgb(255, 255, 255),rgb(237, 204, 204), #ffffff); /* Define your gradient */
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text; /* Fallback for non-webkit browsers */
+              color: transparent;            }
+    </style>
+
+</head>
+<body>
+    <div class="nav w-full h-[60px] shadow-lg flex justify-between items-center px-4 bg-gradient-to-t from-stone-800 to-neutral-900 text-white">
+        <div class="logo text-3xl px-3 font-bold"><span id="laxmi">Laxmi</span> <span id="studio">Studio</span></div>
+        <!-- Menu Button for Small Screens -->
+        <button id="menu-btn" class="text-2xl md:hidden">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Navigation Links -->
+        <ul id="menu" class="hidden md:flex  gap-12 text-[1.16em] items-center">
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'adminProfile' %}" class="hover:text-red-400 font-semibold">Admin</a></li>
+          {% endif %}
+            <li><a href="{% url 'home' %}" class="hover:text-red-400 font-semibold">Home</a></li>
+            <li><a href="{% url 'about' %}" class="hover:text-red-400 font-semibold">About Us</a></li>
+            <li><a href="{% url 'gallery' %}" class="hover:text-red-400 font-semibold">Gallery</a></li>
+            <li><a href="{% url 'event' %}" class="hover:text-red-400 font-semibold">Events</a></li>
+            <li><a href="{% url 'blog' %}" class="hover:text-red-400 font-semibold">Blogs</a></li>
+            <li><a href="{% url 'contact' %}" class="hover:text-red-400 font-semibold">Contact</a></li>
+        </ul>
+        <div class="hidden md:block">
+          {% if user.is_authenticated %}
+              <a href="{% url 'logout' %}">
+                  <button class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded text-white">Logout</button>
+              </a>
+          {% else %}
+              <a href="{% url 'login' %}">
+                  <button class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded text-white">Login</button>
+              </a>
+          {% endif %}
+      </div>
+      
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="nav text-white hidden flex-col items-start bg-white w-full py-4 shadow-lg md:hidden">
+        <ul class="font-semibold space-y-4 pl-4">
+          {% if user.is_authenticated %}
+            
+          <li><a href="{% url 'adminProfile' %}" class="hover:text-red-400">Admin Profile</a></li>
+          {% endif %}
+            <li><a href="{% url 'home' %}" class="hover:text-red-400">Home</a></li>
+            <li><a href="{% url 'about' %}" class="hover:text-red-400">About Us</a></li>
+            <li><a href="{% url 'gallery' %}" class="hover:text-red-400">Gallery</a></li>
+            <li><a href="{% url 'event' %}" class="hover:text-red-400">Event</a></li>
+            <li><a href="{% url 'blog' %}" class="hover:text-red-400">Blogs</a></li>
+            <li><a href="{% url 'contact' %}" class="hover:text-red-400">Contact</a></li>
+        </ul>
+        <div class="pl-4 mt-4">
+          {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}">
+              <button class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded text-white">Logout</button>
+          </a>
+      {% else %}
+          <a href="{% url 'login' %}">
+              <button class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded text-white">Login</button>
+          </a>
+      {% endif %}        </div>
+    </div>
+{% block content %}
+  
+{% endblock content %}
+<footer class="footer text-gray-300 py-12 relative">
+    <div class="container mx-auto px-6">
+      <!-- Logo and Center Circle Design -->
+      <div class="flex justify-center mb-8 relative">
+        <div class="absolute inset-0 rounded-full border-t border-gray-600"></div>
+        <div class="relative z-10">
+        </div>
+      </div>
+  
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 text-center md:text-left gap-8">
+        <!-- Left Navigation Links -->
+        <div class="space-y-4 mx-auto">
+          <h3 class="text-lg font-semibold text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="{% url 'home' %}" class="hover:text-gray-400">Home</a></li>
+            <li><a href="{% url 'about' %}" class="hover:text-gray-400">About</a></li>
+            <li><a href="{% url 'gallery' %}" class="hover:text-gray-400">Gallery</a></li>
+            <li><a href="{% url 'blog' %}" class="hover:text-gray-400">Blogs</a></li>
+          </ul>
+        </div>
+  
+        <!-- Center Subscription Form -->
+        <div>
+          <form action="" method="post">
+            {% csrf_token %}
+          <h3 class="text-lg font-semibold text-white mb-4">Sign Up For All The Latest News and Offers</h3>
+          <div class="flex justify-center">
+            <input type="email" placeholder="Enter your email" name="email"
+              class="w-2/3 py-1 px-4 rounded-l bg-gray-800 text-white focus:outline-none">
+            <button class="bg-red-800 text-white px-4 py-2 rounded-r hover:bg-red-600">
+              Subscribe &rarr;
+            </button>
+          </div>
+          {% if messages %}
+  <div>
+    {% for message in messages %}
+      <div class="{% if message.tags %}alert-{{ message.tags }}{% endif %}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+        </form>
+        </div>
+  
+        <!-- Right Navigation Links -->
+        <div class="space-y-4 mx-[100px]">
+          <h3 class="text-lg font-semibold text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            
+            <li><a href="{% url 'event' %}" class="hover:text-gray-400">Events</a></li>
+            
+            <li><a href="{% url 'blog' %}" class="hover:text-gray-400">Latest News</a></li>
+            <li><a href="{% url 'contact' %}" class="hover:text-gray-400">Contact Us</a></li>
+            <li><a href="#products" class="hover:text-gray-400">+918920380989</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Bottom Section -->
+      <div class="flex flex-col md:flex-row justify-between items-center mt-8 border-t border-gray-700 pt-4">
+        <!-- Copyright -->
+        <p class="text-sm text-gray-500">Laxmi  photography, All Rights Reserved</p>
+  
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a href="#" class="hover:text-teal-400"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-teal-400"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-teal-400"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="hover:text-teal-400"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  
+
+
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    const slider = document.querySelector('.slider');
+    const images = document.querySelectorAll('.slider img');
+
+    function scaleCenterImage() {
+      const containerRect = slider.parentElement.getBoundingClientRect();
+      images.forEach((img) => {
+        const imgRect = img.getBoundingClientRect();
+        const imgCenter = imgRect.left + imgRect.width / 2;
+        const containerCenter = containerRect.left + containerRect.width / 2;
+
+        // If the image is at the center, scale it up
+        if (Math.abs(imgCenter - containerCenter) < imgRect.width / 2) {
+          img.classList.add('center');
+        } else {
+          img.classList.remove('center');
+        }
+      });
+    }
+
+    // Continuously check for the center image to apply the scale effect
+    setInterval(scaleCenterImage, 7000);  // 2 seconds interval
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const counters = document.querySelectorAll('.count');
+      const operationSection = document.getElementById('operation-section');
+
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  counters.forEach(counter => {
+                      const updateCount = () => {
+                          const target = +counter.getAttribute('data-target');
+                          const count = +counter.innerText;
+
+                          const increment = target / 100;
+
+                          if (count < target) {
+                              counter.innerText = Math.ceil(count + increment);
+                              setTimeout(updateCount, 20); // Speed
+                          } else {
+                              counter.innerText = target; // Fix final number
+                          }
+                      };
+                      updateCount();
+                  });
+                  observer.unobserve(entry.target); // Stop observing after animation
+              }
+          });
+      });
+
+      observer.observe(operationSection);
+  });
+  function animateNumber(id, target) {
+    let current = 0;
+    const increment = target / 100;
+    const element = document.getElementById(id);
+    const interval = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(interval);
+        }
+        element.textContent = Math.floor(current);
+    }, 30);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    animateNumber("cameras", 50);
+    animateNumber("props", 90);
+    animateNumber("events", 300);
+});
+</script>
+</body>
+</html>

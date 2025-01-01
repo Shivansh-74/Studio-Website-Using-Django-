@@ -1,0 +1,60 @@
+{% extends "NavbarandFooter.html" %}
+
+{% block content %}
+<div class="about flex justify-center items-center min-h-screen ">
+    <form 
+        action="" 
+        method="post" 
+        enctype="multipart/form-data" 
+        class="w-full max-w-lg bg-[#00000032] p-8 rounded-lg shadow-lg"
+    >
+        {% csrf_token %}
+        <h2 class="text-2xl font-bold mb-6 text-center text-white">Edit Blog</h2>
+
+        <!-- Blog Images -->
+        <div class="mb-4">
+            <label for="blogImages" class="block text-white font-medium mb-2">Blog Image</label>
+            <input 
+                type="file" 
+                id="blogImages" 
+                name="blogImages" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none"
+            >
+        </div>
+
+        <!-- Date Show -->
+        <div class="mb-4">
+            <label for="dateShow" class="block text-white font-medium mb-2">Date (Display)</label>
+            <input 
+                type="text" 
+                id="dateShow" 
+                name="dateShow" 
+                value="{{ blog.dateShow }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Description -->
+        <div class="mb-4">
+            <label for="discription" class="block text-white font-medium mb-2">Description</label>
+            <textarea 
+                id="discription" 
+                name="discription" 
+                rows="4"
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >{{ blog.discription }}</textarea>
+        </div>
+
+        <!-- Date (Auto-filled) -->
+ 
+
+        <!-- Submit Button -->
+        <button 
+            type="submit" 
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+        >
+            Submit
+        </button>
+    </form>
+</div>
+{% endblock content %}

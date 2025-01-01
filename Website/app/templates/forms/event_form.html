@@ -1,0 +1,118 @@
+{% extends "NavbarandFooter.html" %}
+
+{% block content %}
+<div class="about flex justify-center items-center min-h-screen bg-gray-900">
+    <form 
+        action="" 
+        method="post" 
+        enctype="multipart/form-data" 
+        class="w-full max-w-lg bg-[#00000032] p-8 rounded-lg shadow-lg my-10"
+    >
+        {% csrf_token %}
+        <h2 class="text-2xl font-bold mb-6 text-center text-white">Edit Event</h2>
+
+        <!-- Package -->
+        <div class="mb-4">
+            <label for="package" class="block text-white font-medium mb-2">Package</label>
+            <input 
+                type="text" 
+                id="package" 
+                name="package" 
+                value="{{ event.package }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Event Image -->
+        <div class="mb-4">
+            <label for="eventImage" class="block text-white font-medium mb-2">Event Image</label>
+            <input 
+                type="file" 
+                id="eventImage" 
+                name="eventImage" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none"
+            >
+        </div>
+
+        <!-- Description -->
+        <div class="mb-4">
+            <label for="desc" class="block text-white font-medium mb-2">Description</label>
+            <input 
+                type="text" 
+                id="desc" 
+                name="desc" 
+                value="{{ event.desc }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Time -->
+        <div class="mb-4">
+            <label for="time" class="block text-white font-medium mb-2">Time</label>
+            <input 
+                type="text" 
+                id="time" 
+                name="time" 
+                value="{{ event.time }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Outfit -->
+        <div class="mb-4">
+            <label for="outfit" class="block text-white font-medium mb-2">Outfit</label>
+            <input 
+                type="text" 
+                id="outfit" 
+                name="outfit" 
+                value="{{ event.outfit }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Image Number -->
+        <div class="mb-4">
+            <label for="imageNum" class="block text-white font-medium mb-2">Image Number</label>
+            <input 
+                type="number" 
+                id="imageNum" 
+                name="imageNum" 
+                value="{{ event.imageNum }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Photography -->
+        <div class="mb-4">
+            <label for="graphy" class="block text-white font-medium mb-2">Photography</label>
+            <input 
+                type="text" 
+                id="graphy" 
+                name="graphy" 
+                value="{{ event.graphy }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Price -->
+        <div class="mb-4">
+            <label for="price" class="block text-white font-medium mb-2">Price</label>
+            <input 
+                type="number" 
+                id="price" 
+                name="price" 
+                value="{{ event.price }}" 
+                class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+        </div>
+
+        <!-- Submit Button -->
+        <button 
+            type="submit" 
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300"
+        >
+            Submit
+        </button>
+    </form>
+</div>
+{% endblock content %}

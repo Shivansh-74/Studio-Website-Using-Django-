@@ -1,0 +1,28 @@
+{% extends "NavbarandFooter.html" %}
+{% block content %}
+<div class="about">
+    <h1 class="text-5xl font-serif font-bold text-white py-8 text-center">Latest <span class="gradient-text">Blogs</span></h1>
+
+    {% if user.is_authenticated %}
+    <a href="{% url 'blogCreate' %}" class="text-white ">  
+        <div class="flex gap-2 justify-center items-center bg-blue-600 text-white text-1xl py-2 my-4  rounded-lg hover:bg-blue-700 transition w-[200px] mx-auto" ><h1>Add Event</h1><i class="fa-solid fa-plus "></i></div>
+    </a>
+    {% endif %}
+    <div class=" w-[100%] flex justify-center items-center gap-8  flex-wrap text-white">
+        {% for i in obj %}
+        
+        <div class="blog w-[350px] bg-[#00000049] h-[450px] border border-gray-600 shadow-lg rounded-[10px] flex flex-col items-center cursor-pointer duration-300">
+        <div class="blog-img w-[95%] py-4"><img src="{{i.blogImages.url}}" alt="" class="rounded w-[95%] h-[300px] mx-auto"></div>
+        <div class="blog-date w-[90%] flex justify-between"><h1 class="py-1 rounded bg-red-800 px-3 w-[120px] my-2">{{i.dateShow}}</h1>
+            {% if user.is_authenticated %}
+            <a href="{% url 'blogDelete' i.id %}" class="py-1 rounded bg-red-800 px-3 w-[70px] my-2 hover:bg-red-700">Delete</a>
+            {% endif %}
+        </div>
+        <div class="blog-title w-[90%] text-[0.9em] ">{{i.discription}}</div>
+        
+        
+    </div>
+    {% endfor %}
+</div>
+</div>
+{% endblock content %}

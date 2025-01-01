@@ -1,0 +1,62 @@
+{% extends "NavbarandFooter.html" %}
+{% block content %}
+<div class="about grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+  
+  <!-- Add Button -->
+   {% if user.is_authenticated %}
+     
+   <a 
+   href="{% url 'partyEdit' %}" 
+   class="py-4 px-4 bg-green-500 text-white rounded-[20px] shadow-lg flex justify-center items-center hover:bg-green-600 hover:shadow-xl transition duration-300"
+   >
+   <i class="fa-solid fa-plus text-2xl"></i>
+  </a>
+  {% endif %}
+
+  {% for i in obj %}
+    <div class="relative rounded-[20px] shadow-md overflow-hidden hover:scale-[1.01] duration-300 cursor-pointer" onclick="openModal('{{ i.weddingImages.url }}')">
+      <img src="{{i.partyImages.url}}" alt="Image" class="w-full h-[300px] object-cover">
+
+      <!-- Delete Button -->
+      {% if user.is_authenticated %}
+      <a 
+        href="{% url 'partyDelete' i.id %}" 
+        class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 text-sm rounded-full hover:bg-red-600 transition duration-300 shadow-lg"
+      >
+        Delete
+      </a>
+      {% endif %}
+
+    </div>
+  {% endfor %}
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 hidden justify-center items-center z-50">
+  <div class="relative max-w-4xl w-full">
+    <button 
+      onclick="closeModal()" 
+      class="absolute top-2 right-2 bg-red-500 text-white rounded-full px-3 py-1 hover:bg-red-600 transition duration-300"
+    >
+      &times;
+    </button>
+    <img id="modalImage" src="" alt="Full Screen Image" class="w-full max-h-[90vh] object-contain">
+  </div>
+</div>
+
+<script>
+  function openModal(imageUrl) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = imageUrl;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+</script>
+{% endblock content %}

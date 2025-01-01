@@ -1,0 +1,123 @@
+<style>
+/* Add this CSS to hide the scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar in webkit-based browsers */
+}
+.scrollbar-hidden {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+</style>
+{% extends "NavbarandFooter.html" %}
+{% block content %}
+<div class="about w-full py-10 md:py-20">
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-5 py-2 px-4 md:px-2 w-full md:h-[500px]">
+        <!-- Left Section (Image) -->
+        <div class="col-span-2 py-2 px-2 flex flex-col items-center">
+            <img src="{{about.0.aboutImages.url}}" alt="" class="rounded shadow-lg w-full h-[300px] md:h-[450px]">
+            {% if user.is_authenticated %}
+            <a href="{% url 'aboutEdit' about.0.id %}" class="bg-yellow-400 rounded px-3 py-1 mt-2">Edit</a>
+            {% endif %}
+        </div>
+    
+        <!-- Right Section (Text) -->
+        <div class="col-span-3 py-2 px-2 flex flex-col items-center">
+            <div class="w-full md:w-[85%] flex flex-col text-white gap-6 px-4 md:px-0">
+                <h1 class="text-3xl md:text-5xl font-mono font-bold text-left gradient-text">About Us</h1>
+                <p class="text-sm md:text-base h-[370px] overflow-auto leading-6 text-left scrollbar-hidden">
+                    Welcome to <span class="text-red-400 font-semibold">Studio Laxmi</span>, a premier photography studio located in Ghamapur, Jabalpur. With years of experience in capturing life's most cherished moments, we are dedicated to delivering exceptional service and timeless photographs that you can treasure forever.
+                    <br><br>
+                    Conveniently situated near the Belbag Police Station, we operate every day from 12:00 PM to 9:00 PM, ensuring flexible scheduling for our clients. Whether it's a wedding, a family portrait, or a creative photoshoot, our team of experienced professionals is passionate about making every event special.
+                    <br><br>
+                    At <span class="text-red-400 font-semibold">Studio Laxmi</span>, we believe in creating memories that last a lifetime. Our commitment to quality, creativity, and customer satisfaction has made us a trusted name in the photography industry. Rated 4.8 stars by our clients, we pride ourselves on offering a wide range of tailored services to meet diverse needs, including destination wedding shoots, portrait photography, and more.
+                    <br><br>
+                    Our talented photography team combines technical expertise with a deep passion for the art of photography. They are known for their ability to make clients feel comfortable, ensuring every session is a unique and enjoyable experience.
+                    <br><br>
+                    Choose <span class="text-red-400 font-semibold">Studio Laxmi</span> for all your photography needs, and let us help you tell your story through stunning visuals.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-5 mt-10">
+        <!-- Left Section -->
+        <div class="col-span-1 md:ml-1">
+            <h1 class="text-3xl md:text-5xl text-white font-bold mb-5">20 Amazing <br> Photographers</h1>
+            <p class="text-white text-sm md:text-base mb-5 leading-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique dignissimos incidunt commodi nostrum, suscipit, optio quis assumenda id, necessitatibus eligendi totam quasi.
+            </p>
+            <h2 class="text-white text-lg md:text-2xl flex items-center gap-2">
+                <span class="bg-red-800 text-base md:text-lg py-2 px-4 rounded-full">15+</span>
+                Year Experience
+            </h2>
+        </div>
+
+        <!-- Center Image -->
+        <div class="col-span-1 flex justify-center items-center flex-col gap-6">
+            <img class="rounded-lg shadow-lg w-full h-[300px] md:h-[400px]" src="{{about.1.aboutImages.url}}" alt="Photographers">
+            {% if user.is_authenticated %}
+            <a href="{% url 'aboutEdit' about.1.id %}" class="bg-yellow-400 rounded px-3 py-1">Edit</a>
+            {% endif %}
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-span-1 text-white">
+            <div class="flex gap-5 items-center">
+                <h1 class="text-3xl md:text-5xl font-bold" id="cameras ">0</h1><span>+</span>
+                <p class="text-sm md:text-2xl">PROFESSIONAL <br> CAMERAS</p>
+            </div>
+            <div class="w-[30%] h-[3px] bg-red-800 mb-5 my-3"></div>
+
+            <div class="flex gap-5 my-8 items-center">
+                <h1 class="text-3xl md:text-5xl font-bold" id="props">0</h1><span>+</span>
+                <p class="text-sm md:text-2xl">PHOTOGRAPHY <br> PROPS</p>
+            </div>
+            <div class="w-[50%] h-[3px] bg-red-800 mb-5"></div>
+
+            <div class="flex gap-5 my-8 items-center">
+                <h1 class="text-3xl md:text-5xl font-bold" id="events">0</h1><span>+</span>
+                <p class="text-sm md:text-2xl">EVENTS <br> COVERED</p>
+            </div>
+            <div class="w-[80%] h-[3px] bg-red-800"></div>
+        </div>
+    </div>
+    <div class="w-[85%]  flex md:justify-between md:gap-6 gap-10 mx-auto justify-center items-center md:py-20 py-14 md:flex-row flex-col" >
+        <a href="{% url 'contact' %}">
+       <div class="flex  gap-4 ">
+                <div><i class="fa-solid fa-location-pin mt-2 p-3 bg-red-600 text-3xl py-2 text-white rounded-[50%]"></i></div>
+                <div class="flex flex-col text-white">
+                    <div class="text-2xl font-bold">Studio Address</div>
+                    <div>Ghamapur Jabalpur</div>
+                    <div class="font-bold underline py-2">VIEW MAP</div>
+                </div>
+            </div>
+        </a>
+        <a href="tel:+917489410884">
+    
+            <div class="flex  gap-4">
+                <div><i class="fa-solid fa-mobile-screen-button mt-2 p-3 bg-red-600 text-3xl py-2  text-white rounded-[50%]"></i></div>
+                <div class="flex flex-col text-white">
+                    <div class="text-2xl font-bold">Contact us </div>
+                    <div>+91 928839302</div>
+                    <div class="font-bold underline py-2">CALL NOW</div>
+                </div>
+            </div>
+        </a>
+        <a href="">
+    
+            <div class="flex  gap-4">
+                <div><i class="fa-brands fa-instagram mt-2   p-3 bg-red-600 text-3xl py-2  text-white rounded-[50%]"></i></div>
+                <div class="flex flex-col text-white">
+                    <div class="text-2xl font-bold">Instagram</div>
+                    <div>Visit Instagram</div>
+                    <div class="font-bold underline py-2">ADD NOW</div>
+                </div>
+            </div>
+        </a>
+    
+    </div>
+    
+</div>
+{% endblock content %}

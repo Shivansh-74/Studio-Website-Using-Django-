@@ -1,0 +1,33 @@
+{% extends "NavbarandFooter.html" %}
+
+{% block content %}
+<div class="about w-[100%] h-[60vh] flex justify-center items-center bg-gray-100">
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="flex flex-col gap-5 w-[400px] h-[300px] shadow-lg rounded-[10px] justify-center items-center bg-[#00000032]">
+           <h1 class="text-white py-6 text-2xl font-semibold"> Enter Username and Password</h1>
+            <input 
+                type="text" 
+                name="username" 
+                placeholder="Username" 
+                class="bg-transparent border-b-2 outline-none py-2 w-[300px] rounded-lg text-white"
+            >
+            <input 
+                type="password" 
+                name="password" 
+                placeholder="Password" 
+                class="bg-transparent border-b-2 outline-none py-2 w-[300px] rounded-lg text-white"
+            >
+            <button 
+                type="submit" 
+                class="bg-red-700 text-white px-4 py-2 rounded mx-auto hover:bg-red-800 transition-all"
+            >
+                Login
+            </button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}

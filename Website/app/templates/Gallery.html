@@ -1,0 +1,62 @@
+{% extends "NavbarandFooter.html" %}
+{% block content %}
+
+<div class="about w-[100%]">
+  <h1 class="text-5xl font-serif font-bold text-white py-9 text-center">Gallery <span class="gradient-text">Images</span></h1>
+  <div class="flex flex-wrap gap-8 justify-center py-4">
+    <a href="{% url 'wedding' %}" class="my-2 group">
+      <div class="md:w-[550px] md:h-[400px] w-[350px] h-[300px] relative overflow-hidden rounded-[25px] hover:scale-[1.03] duration-300 shadow-lg">
+        <!-- Image -->
+        <img src="{{obj.0.galleryImages.url}}" 
+             alt="Wedding Images" 
+             class="w-full h-full object-cover rounded-[25px] group-hover:brightness-75 duration-300">
+        <!-- Overlay Text -->
+        <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 duration-300">
+          Click to View
+        </div>
+      </div>
+      <h1 class="mx-5 py-3 text-2xl text-white font-semibold text-center">Wedding Images</h1>
+    </a>
+    <a href="{% url 'birthday' %}" class="my-2 group">
+      <div class="md:w-[550px] md:h-[400px] w-[350px] h-[300px] relative overflow-hidden rounded-[25px] hover:scale-[1.03] duration-300 shadow-lg">
+        <!-- Image -->
+        <img src="{{obj.1.galleryImages.url}}" 
+             alt="Wedding Images" 
+             class="w-full h-full object-cover rounded-[25px] group-hover:brightness-75 duration-300">
+        <!-- Overlay Text -->
+        <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 duration-300">
+          Click to View
+        </div>
+      </div>
+      <h1 class="mx-5 py-3 text-2xl text-white font-semibold text-center">Birthday Images</h1>
+    </a>
+    <a href="{% url 'haldi' %}" class="my-2 group">
+      <div class="md:w-[550px] md:h-[400px] w-[350px] h-[300px] relative overflow-hidden rounded-[25px] hover:scale-[1.03] duration-300 shadow-lg">
+        <!-- Image -->
+        <img src="{{obj.2.galleryImages.url}}" 
+             alt="Wedding Images" 
+             class="w-full h-full object-cover rounded-[25px] group-hover:brightness-75 duration-300">
+        <!-- Overlay Text -->
+        <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 duration-300">
+          Click to View
+        </div>
+      </div>
+      <h1 class="mx-5 py-3 text-2xl text-white font-semibold text-center">Haldi Images</h1>
+    </a>
+    <a href="{% url 'party' %}" class="my-2 group">
+      <div class="md:w-[550px] md:h-[400px] w-[350px] h-[300px] relative overflow-hidden rounded-[25px] hover:scale-[1.03] duration-300 shadow-lg">
+        <!-- Image -->
+        <img src="{{obj.4.galleryImages.url}}" 
+             alt="Wedding Images" 
+             class="w-full h-full object-cover rounded-[25px] group-hover:brightness-75 duration-300">
+        <!-- Overlay Text -->
+        <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 text-white text-2xl font-semibold opacity-0 group-hover:opacity-100 duration-300">
+          Click to View
+        </div>
+      </div>
+      <h1 class="mx-5 py-3 text-2xl text-white font-semibold text-center">Random Images</h1>
+    </a>
+  </div>
+</div>
+
+{% endblock content %}

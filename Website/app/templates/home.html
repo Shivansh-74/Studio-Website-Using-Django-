@@ -1,0 +1,390 @@
+{% extends "NavbarandFooter.html" %}
+{% block content %}
+<div class="home-bg w-[100%]">
+
+    <div class=" w-[100%] md:h-[450px] h-[80vh] flex justify-center items-center">
+        <div class=" w-[1050px] text-white flex justify-center items-center flex-col">
+            <button class="md:px-5 md:py-2 px-3 py-1  md:my-2 my-4 rounded-[20px] bg-[#ede4e453]">Photography Agency</button>
+            <h1 class="md:text-7xl text-4xl font-serif font-bold text-center">
+                We Capture Your Best
+                <span class="gradient-text"> Memories </span> Here
+            </h1>
+            <p class="text-center md:text-1xl text-[0.9em] mt-6 py-4 md:w-[600px] w-[300px]">Choose Studio Laxmi for all your photography needs, and let us help you tell your story through stunning visuals.</p>
+            </div>
+        </div>
+
+
+<!-- home end -->
+<div class="slider-container w-full max-w-7xl mx-auto mb-6">
+<div class="slider">
+  <!-- Duplicate first set of images for smooth marquee -->
+   
+  <img src="{{home.15.homeImages.url}}" alt="Image 1" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.14.homeImages.url}}" alt="Image 2" class="w-64 h shadow-lg  object-cover">
+  <img src="{{home.13.homeImages.url}}" alt="Image 3" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.16.homeImages.url}}" alt="Image 4" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.17.homeImages.url}}" alt="Image 5" class="w-64 h-08  shadow-lg object-cover">
+
+  <!-- Duplicate images -->
+  <img src="{{home.18.homeImages.url}}" alt="Image 1" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.19.homeImages.url}}" alt="Image 2" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.2.homeImages.url}}" alt="Image 3" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.9.homeImages.url}}" alt="Image 4" class="w-64 h-08  shadow-lg object-cover">
+  <img src="{{home.10.homeImages.url}}" alt="Image 5" class="w-64 h-08  shadow-lg object-cover">
+</div>
+</div>
+
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <!-- Left Section -->
+    <div>
+        <!-- Why Choose Us Section -->
+        <section class="mb-12">
+            <h2 class="text-5xl font-serif  font-bold text-white text-center py-8">Why <span class="gradient-text">Choose Us</span> </h2>
+            <p class="text-gray-400 mt-2 mb-6">
+                Studio Laxmi is a trusted name in photography, known for exceptional creativity, professionalism, and commitment to capturing memorable moments. 
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex items-center space-x-4">
+                    <span class="text-teal-400 text-2xl">🔴</span>
+                    <p class="text-gray-200 font-medium">Printed Photograph provided</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-teal-400 text-2xl">🔴</span>
+                    <p class="text-gray-200 font-medium">Indoor & Outdoor Arrangement</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-teal-400 text-2xl">🔴</span>
+                    <p class="text-gray-200 font-medium">High Resolution Camera</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-teal-400 text-2xl">🔴</span>
+                    <p class="text-gray-200 font-medium">Photography Albums</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-teal-400 text-2xl">🔴</span>
+                    <p class="text-gray-200 font-medium">Experienced Photographer</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-teal-400 text-2xl">🔴</span>
+                    <p class="text-gray-200 font-medium">Different Cemeras</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kimono Operation Section -->
+        <section id="operation-section">
+            <p class="text-gray-400 mt-2 mb-6">
+                With flexible scheduling, a highly skilled team, and a client-focused approach, they deliver timeless images for every occasion
+            </p>
+            <div class="grid grid-cols-2 gap-6 text-center">
+                <div>
+                    <p class="text-3xl font-extrabold text-white">
+                        <span class="count" data-target="100">0</span><span class="text-red-600">%</span>
+                    </p>
+                    <p class="text-gray-400 mt-2 text-sm">Customer Satisfaction</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">
+                        <span class="count" data-target="350">0</span><span class="text-red-600">+</span>
+                    </p>
+                    <p class="text-gray-400 mt-2 text-sm">Photography Session</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">
+                        <span class="count" data-target="50">0</span><span class="text-red-600">+</span>
+                    </p>
+                    <p class="text-gray-400 mt-2 text-sm">Experienced Photographers</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-extrabold text-white">
+                        <span class="count" data-target="250">0</span><span class="text-red-600">+</span>
+                    </p>
+                    <p class="text-gray-400 mt-2 text-sm">Event Covered</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Right Section - Image -->
+    <div class="flex items-center justify-center flex-col gap-2">
+        <img 
+            src="{{home.1.homeImages.url}}" 
+            alt="Placeholder Image" 
+            class="rounded-lg shadow-lg object-cover w-full lg:w-3/4 md:h-[500px] h-[350px]"
+        />
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.1.id %}" class="bg-yellow-400 rounded px-3 py-1">Edit</a>
+        {% endif %}
+    </div>
+</div>
+</div>
+<!-- cards  -->
+
+
+
+<h1 class="text-5xl text-white py-6 mt-6 text-center font-serif font-bold">Phototography <span class="gradient-text">Services</span></h1>
+<div class="w-[100%] flex justify-center items-center gap-14 flex-wrap py-4 my-5">
+    <!-- start -->
+    <div class="card w-[330px] h-[350px]   shadow-lg rounded-[5%] flex flex-col gap-[30px] items-center hover:scale-[1.02] hover:shadow-lg hover:bg-gray-900 transition-transform duration-500">
+       
+        <div class="logo py-8 text-7xl text-white  transition-colors duration-300">
+<svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" width="111px" height="111px" fill="#ffffff" stroke="#ffffff" stroke-width="0.00512" transform="matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#ffffff;} </style> <g> <path class="st0" d="M425.797,130.088c-12.509,0-22.646,10.136-22.646,22.629v15.163l-62.255,12.053 c-22.642,0-50.941-14.16-84.892-14.16c-33.965,0-62.259,14.16-84.901,14.16l-62.258-12.053v-15.163 c0-12.493-10.133-22.629-22.638-22.629S63.57,140.224,63.57,152.718v70.757c0,12.492,10.132,22.63,22.637,22.63 s22.638-10.137,22.638-22.63v-13.338c18.087,3.782,43.018,8.959,59.43,12.244c25.968,5.193,35.346,41.26,76.046,47.191v37.477 c-6.533,0.547-11.68,5.964-11.68,12.634c0,0.099,0.029,0.191,0.029,0.29c-23.036,9.257-39.315,31.762-39.315,58.107 c0,34.598,28.046,62.645,62.645,62.645c34.599,0,62.645-28.046,62.645-62.645c0-26.346-16.279-48.85-39.314-58.107 c0-0.1,0.029-0.191,0.029-0.29c0-6.67-5.148-12.086-11.68-12.634v-37.477c40.696-5.932,50.082-41.998,76.045-47.191 c16.407-3.285,41.343-8.461,59.426-12.244v13.338c0,12.492,10.137,22.63,22.646,22.63c12.501,0,22.629-10.137,22.629-22.63v-70.757 C448.426,140.224,438.298,130.088,425.797,130.088z M297.409,378.079c0,22.87-18.539,41.409-41.409,41.409 c-22.87,0-41.409-18.54-41.409-41.409c0-22.87,18.54-41.409,41.409-41.409C278.87,336.67,297.409,355.209,297.409,378.079z"></path> <rect y="90.993" class="st0" width="172.414" height="29.556"></rect> <rect x="339.577" y="90.993" class="st0" width="172.423" height="29.556"></rect> <path class="st0" d="M86.207,71.276c-7.142,0-12.928,5.79-12.928,12.94h25.86C99.139,77.066,93.344,71.276,86.207,71.276z"></path> <path class="st0" d="M425.797,71.276c-7.15,0-12.94,5.79-12.94,12.94h25.864C438.72,77.066,432.931,71.276,425.797,71.276z"></path> <path class="st0" d="M267.555,354.28c-3.509-1.7-7.395-2.745-11.555-2.745c-14.662,0-26.544,11.887-26.544,26.544 s11.883,26.544,26.544,26.544c14.661,0,26.544-11.887,26.544-26.544c0-3.584-0.73-7.001-2.02-10.12 c-1.506,4.031-5.317,6.934-9.875,6.934c-5.864,0-10.618-4.753-10.618-10.618C260.032,359.515,263.229,355.624,267.555,354.28z"></path> </g> </g></svg>        </div>
+        <div class="flex flex-col items-center">
+            <div class="title text-[23px] font-bold text-white  transition-colors duration-300">
+                Drone Cinematography
+            </div>
+            <div class="w-[90%] h-[1px] bg-red-800 my-3 "></div>
+            <div class="description text-center text-gray-400 w-[90%] text-[0.7em] py-2">
+                <h1>From the intimate moments of the ceremony to the joyous celebrations of the reception, we strive to document every detail with creativity and precision</h1>
+            </div>
+        </div>
+    </div>
+            <!-- end -->
+    <!-- start -->
+    <div class="card w-[300px] h-[350px] border border-gray-900 shadow-lg rounded-[5%] flex flex-col gap-[30px] items-center hover:scale-[1.02] hover:shadow-lg hover:bg-gray-800 transition-transform duration-500">
+       
+        <div class="logo py-9 text-7xl text-white  transition-colors duration-300">
+            <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95px" height="95px" viewBox="0 0 381.5 381.5" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M357.107,171.502c-2.854-2.374-6.611-3.359-10.264-2.687l-43.303,7.977v-27.225c0-6.904-5.596-12.5-12.5-12.5h-7.586 c15.98-14.406,26.047-35.254,26.047-58.413C309.502,35.284,274.219,0,230.85,0c-27.734,0-52.146,14.443-66.153,36.19 C150.688,14.443,126.279,0,98.544,0c-43.37,0-78.654,35.284-78.654,78.654c0,23.159,10.066,44.006,26.047,58.413h-7.586 c-6.903,0-12.5,5.596-12.5,12.5v149.449c0,6.904,5.597,12.5,12.5,12.5h97.5l-48.645,48.646c-4.882,4.882-4.882,12.796,0,17.678 c4.883,4.882,12.797,4.881,17.678,0l59.813-59.813l59.812,59.813c2.441,2.441,5.641,3.661,8.84,3.661 c3.197,0,6.398-1.221,8.84-3.661c4.881-4.881,4.881-12.796,0-17.678l-48.646-48.646h97.5c6.902,0,12.5-5.596,12.5-12.5v-27.225 l43.301,7.979c0.754,0.139,1.512,0.207,2.266,0.207c2.898,0,5.734-1.01,7.998-2.895c2.854-2.375,4.502-5.895,4.502-9.605v-86.37 C361.609,177.397,359.959,173.877,357.107,171.502z M230.851,25.001c29.585,0,53.653,24.069,53.653,53.654 c0,29.584-24.068,53.653-53.653,53.653s-53.653-24.068-53.653-53.653C177.196,49.07,201.266,25.001,230.851,25.001z M164.696,121.118c3.801,5.9,8.354,11.269,13.547,15.95H151.15C156.343,132.387,160.896,127.018,164.696,121.118z M44.891,78.655 c0-29.585,24.069-53.654,53.654-53.654c29.584,0,53.652,24.069,53.652,53.654c0,29.584-24.068,53.653-53.652,53.653 C68.959,132.308,44.891,108.24,44.891,78.655z M278.543,286.518H50.852v-124.45h227.691V286.518z M336.609,252.464l-33.066-6.092 v-44.158l33.066-6.092V252.464z"></path> </g> </g></svg>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="title text-[23px] font-bold text-white  transition-colors duration-300">
+                Wedding Phototography
+            </div>
+            <div class="w-[90%] h-[1px] bg-red-800 my-3 "></div>
+            <div class="description text-center text-gray-400 w-[90%] text-[0.7em] py-2">
+                <h1>Capture the essence of your special day with our professional wedding photography services.</h1>
+            </div>
+        </div>
+    </div>
+            <!-- end -->
+    <!-- start -->
+    <div class="card w-[300px] h-[350px] border border-gray-900 shadow-lg rounded-[5%] flex flex-col gap-[30px] items-center hover:scale-[1.02] hover:shadow-lg hover:bg-gray-800 transition-transform duration-500">
+       
+        <div class="logo py-8 text-7xl text-white  transition-colors duration-300">
+            <svg width="95px" height="95px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12.991 6.75v-2.25c0-0.827-0.678-1.5-1.512-1.5h-7.479v-0.5c0-0.276 0.225-0.5 0.5-0.5h5.541v-1h-5.541c-0.827 0-1.5 0.673-1.5 1.5v0.5h-1.488c-0.834 0-1.512 0.673-1.512 1.5v2.001c0 0.827 0.678 1.5 1.512 1.5h0.504v5.499c0 0.827 0.673 1.5 1.5 1.5h7.964c0.834 0 1.512-0.673 1.512-1.5v-2.251l4.008 2.783v-10.065l-4.009 2.783zM16 12.121l-4.009-2.783v4.162c0 0.276-0.229 0.5-0.512 0.5h-7.963c-0.275 0-0.5-0.224-0.5-0.5v-6.499h-1.504c-0.283 0-0.512-0.224-0.512-0.5v-2.001c0-0.276 0.229-0.5 0.512-0.5h9.968c0.282 0 0.512 0.224 0.512 0.5v4.163l4.008-2.784v6.242z" fill="#000000"></path> </g></svg>        </div>
+        <div class="flex flex-col items-center">
+            <div class="title text-[23px] font-bold text-white  transition-colors duration-300">
+                Wedding Cinematography
+            </div>
+            <div class="w-[90%] h-[1px] bg-red-800 my-3 "></div>
+            <div class="description text-center text-gray-400 w-[90%] text-[0.7em] py-2">
+                <h1>Our photographers focus on capturing the love and commitment between you and your partner during this special event.</h1>
+            </div>
+        </div>
+    </div>
+            <!-- end -->
+    <!-- start -->
+    <div class="card w-[300px] h-[350px] border border-gray-900 shadow-lg rounded-[5%] flex flex-col gap-[30px] items-center hover:scale-[1.02] hover:shadow-lg hover:bg-gray-800 transition-transform duration-500">
+       
+        <div class="logo py-8 text-7xl text-white  transition-colors duration-300">
+            <svg fill="#ffffff" height="95px" width="95px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 372.844 372.844" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M113.094,94.363c-0.212,5.459-8.47,9.848-18.646,9.848c-10.175,0-18.435-4.389-18.647-9.848 c-9.823,6.2-16.353,17.141-16.353,29.615c0,19.331,15.668,35.001,35,35.001c19.332,0,35-15.67,35-35.001 C129.447,111.504,122.917,100.563,113.094,94.363z"></path> <path d="M326.447,168.28h-99.516c-25.623,0-46.396,20.772-46.396,46.397v1.044h-11.088v-31.718 c12.19-15.909,19.447-35.788,19.447-57.332c0-33.729-17.775-63.379-44.447-80.09v-4.958c0-9.07-7.351-16.421-16.421-16.421H60.868 c-9.07,0-16.421,7.351-16.421,16.421v4.958C17.775,63.292,0,92.942,0,126.671c0,21.545,7.257,41.423,19.447,57.332v120.005 c0,24.099,19.535,43.634,43.634,43.634h62.732c24.099,0,43.634-19.536,43.634-43.634v-28.886h11.088v1.043 c0,25.625,20.773,46.398,46.396,46.398h99.516c25.625,0,46.397-20.773,46.397-46.398v-61.487 C372.844,189.053,352.072,168.28,326.447,168.28z M73.088,305.199H57.756c-7.548,0-13.667-6.119-13.667-13.667 c0-7.548,6.119-13.666,13.667-13.666h15.332c7.548,0,13.667,6.119,13.667,13.666C86.755,299.081,80.636,305.199,73.088,305.199z M94.447,181.117C64.425,181.117,40,156.693,40,126.671c0-30.022,24.425-54.447,54.447-54.447 c30.022,0,54.447,24.425,54.447,54.447C148.895,156.693,124.47,181.117,94.447,181.117z M340.063,272.532 c0,11.046-8.954,20.001-20,20.001s-20-8.955-20-20.001v-54.589c0-11.046,8.954-20.001,20-20.001s20,8.955,20,20.001V272.532z"></path> </g> </g></svg>        </div>
+        <div class="flex flex-col items-center">
+            <div class="title text-[23px] font-bold text-white  transition-colors duration-300">
+                Birthday Shoot
+            </div>
+            <div class="w-[90%] h-[1px] bg-red-800 my-3 "></div>
+            <div class="description text-center text-gray-400 w-[90%] text-[0.7em] py-2">
+                <h1>Birthdays are special milestones, whether it's a first birthday or a significant age like 18, 30, or 50.</h1>
+            </div>
+        </div>
+    </div>
+            <!-- end -->
+    <!-- start -->
+    <div class="card w-[300px] h-[350px] border border-gray-900 shadow-lg rounded-[5%] flex flex-col gap-[30px] items-center hover:scale-[1.02] hover:shadow-lg hover:bg-gray-800 transition-transform duration-500">
+       
+        <div class="logo py-12 text-7xl text-white  transition-colors duration-300">
+            <i class="fa-solid fa-photo-film"></i>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="title text-[23px] font-bold text-white  transition-colors duration-300">
+                Albums
+            </div>
+            <div class="w-[90%] h-[1px] bg-red-800 my-3 "></div>
+            <div class="description text-center text-gray-400 w-[90%] text-[0.7em] py-2">
+                <h1>The result is a collection of images that encapsulate the start of your lifelong journey together.</h1>
+            </div>
+        </div>
+    </div>
+            <!-- end -->
+    <!-- start -->
+    <div class="card w-[300px] h-[350px] border border-gray-900 shadow-lg rounded-[5%] flex flex-col gap-[30px] items-center hover:scale-[1.02] hover:shadow-lg hover:bg-gray-800 transition-transform duration-500">
+       
+        <div class="logo py-8 text-7xl text-white  transition-colors duration-300">
+            <svg fill="#ffffff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95px" height="95px" viewBox="0 0 235.503 235.503" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M174.96,53.926h-45.048l26.666-26.683c2.328-2.311,2.328-6.067,0-8.377c-2.301-2.309-6.056-2.309-8.371,0l-24.554,24.589 V5.919c0-3.266-2.659-5.919-5.925-5.919s-5.919,2.661-5.919,5.919v37.536L87.244,18.865c-2.316-2.309-6.061-2.309-8.375,0 c-2.309,2.31-2.309,6.067,0,8.377l26.667,26.683H60.522c-12.167,0-22.053,9.907-22.053,22.075v72.696 c0,12.19,9.886,22.089,22.053,22.089h44.464l-54.607,54.598c-2.309,2.316-2.309,6.063,0,8.38c1.146,1.157,2.683,1.739,4.186,1.739 c1.499,0,3.028-0.582,4.182-1.739l59.005-59.021l58.972,59.021c2.316,2.315,6.075,2.315,8.371,0c2.316-2.301,2.316-6.056,0-8.372 l-54.569-54.602h44.435c12.159,0,22.073-9.902,22.073-22.093V76.009C197.041,63.824,187.119,53.926,174.96,53.926z M185.188,148.682c0,5.65-4.597,10.251-10.228,10.251H60.514c-5.634,0-10.197-4.601-10.197-10.251V75.987 c0-5.654,4.562-10.231,10.197-10.231H174.96c5.631,0,10.228,4.577,10.228,10.231V148.682z"></path> <path d="M117.72,79.674c-18.023,0-32.651,14.619-32.651,32.683c0,18.035,14.627,32.679,32.651,32.679 c18.083,0,32.71-14.628,32.71-32.679C150.431,94.301,135.804,79.674,117.72,79.674z M121.901,118.646 c-7.024,0.101-12.801-5.534-12.848-12.539c-0.126-7.033,5.5-12.793,12.527-12.89c6.997-0.084,12.78,5.534,12.904,12.545 C134.545,112.797,128.931,118.569,121.901,118.646z"></path> </g> </g> </g></svg>
+        </div>
+        <div class="flex flex-col items-center">
+            <div class="title text-[23px] font-bold text-white  transition-colors duration-300">
+                Portfolio Shooting
+            </div>
+            <div class="w-[90%] h-[1px] bg-red-800 my-3 "></div>
+            <div class="description text-center text-gray-400 w-[90%] text-[0.7em] py-2">
+                <h1>With a mix of posed portraits and candid shots, we create a vibrant collection of memories that reflect the spirit and joy of the day</h1>
+            </div>
+        </div>
+    </div>
+            <!-- end -->
+
+   
+            <!-- end -->
+   
+
+
+</div>
+ <!-- end -->
+
+
+
+
+<h1 class="text-5xl font-serif font-bold text-white py-9 text-center">Captured <span class="gradient-text">Images</span></h1>
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-[80%] mx-auto">
+  <div class="grid gap-4 gallery">
+      <div>
+        {% if user.is_authenticated %}
+          <a href="{% url 'homeEdit' home.1.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+          {% endif %}
+          <img class="h-[350px] max-w-full rounded-lg" src="{{home.1.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+    <a href="{% url 'homeEdit' home.2.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+    {% endif %}
+          <img class="h-[350px] max-w-full rounded-lg" src="{{home.2.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.3.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.3.homeImages.url}}" alt="">
+      </div>
+  </div>
+  <div class="gallery grid gap-4">
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.13.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.13.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.5.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.5.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.6.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.6.homeImages.url}}" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4 gallery">
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.7.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-[350px] w-[300px] rounded-lg" src="{{home.7.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.8.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.8.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.9.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-[300px] max-w-full rounded-lg" src="{{home.9.homeImages.url}}" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4 gallery">
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.10.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.10.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.11.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-[400px] w-[500px] rounded-lg" src="{{home.11.homeImages.url}}" alt="">
+      </div>
+      <div>
+        {% if user.is_authenticated %}
+        <a href="{% url 'homeEdit' home.4.id %}" class="bg-yellow-400 rounded px-2">Edit</a>
+        {% endif %}
+          <img class="h-auto max-w-full rounded-lg" src="{{home.4.homeImages.url}}" alt="">
+      </div>
+  </div>
+</div>
+<!-- end gallery -->
+
+<!-- blogs -->
+<h1 class="text-5xl font-serif font-bold text-center text-white mt-8 py-5 ">News</h1>
+<div class="w-[100%] flex justify-center items-center gap-8  flex-wrap text-white">
+<div class="blog w-[350px] h-[450px] border border-gray-400 rounded flex flex-col items-center cursor-pointer duration-300">
+    <div class="blog-img w-[95%] py-4 "><img src="{{obj.0.blogImages.url}}" class="h-[300px] w-[95%] mx-auto rounded" alt="" class="rounded "></div>
+    <div class="blog-date w-[90%] "><h1 class="py-1 rounded bg-red-800 px-3 w-[120px] my-2">{{obj.0.dateShow}}</h1></div>
+    <div class="blog-title w-[90%] text-[0.9em] font-bold">{{obj.0.discription}}</div>
+</div>
+
+
+<div class="blog w-[350px] h-[450px] border border-gray-400 rounded flex flex-col items-center cursor-pointer duration-300">
+    <div class="blog-img w-[95%] py-4 "><img src="{{obj.1.blogImages.url}}" class="h-[300px] w-[95%] mx-auto rounded" alt="" class="rounded "></div>
+    <div class="blog-date w-[90%] "><h1 class="py-1 rounded bg-red-800 px-3 w-[120px] my-2">{{obj.1.dateShow}}</h1></div>
+    <div class="blog-title w-[90%] text-[1em] font-bold">{{obj.1.discription}}</div>
+</div>
+
+
+<div class="blog w-[350px] h-[450px] border border-gray-400 rounded flex flex-col items-center cursor-pointer duration-300">
+    <div class="blog-img w-[95%] py-4 "><img src="{{obj.2.blogImages.url}}" class="h-[300px] w-[95%] mx-auto rounded" alt="" class="rounded "></div>
+    <div class="blog-date w-[90%] "><h1 class="py-1 rounded bg-red-800 px-3 w-[120px] my-2">{{obj.2.dateShow}}</h1></div>
+    <div class="blog-title w-[90%] text-[1em] font-bold">{{obj.2.discription}}</div>
+</div>
+
+</div>
+<!-- blog end -->
+
+
+
+<div class="w-[85%]  flex md:justify-between md:gap-6 gap-10 mx-auto justify-center items-center md:py-20 py-14 md:flex-row flex-col" >
+    <a href="{% url 'contact' %}">
+   <div class="flex  gap-4 ">
+            <div><i class="fa-solid fa-location-pin mt-2 p-3 bg-red-600 text-3xl py-2 text-white rounded-[50%]"></i></div>
+            <div class="flex flex-col text-white">
+                <div class="text-2xl font-bold">Studio Address</div>
+                <div class="w-[200px]">Shop No.- 990, Belbaag Road, Ghamapur, Jabalpur </div>
+                <div class="font-bold underline py-2">VIEW MAP</div>
+            </div>
+        </div>
+    </a>
+    <a href="tel:+917489410884">
+
+        <div class="flex  gap-4">
+            <div><i class="fa-solid fa-mobile-screen-button mt-2 p-3 bg-red-600 text-3xl py-2  text-white rounded-[50%]"></i></div>
+            <div class="flex flex-col text-white">
+                <div class="text-2xl font-bold">Contact us </div>
+                <div>+91 928839302</div>
+                <div class="font-bold underline py-2">CALL NOW</div>
+            </div>
+        </div>
+    </a>
+    <a href="">
+
+        <div class="flex  gap-4">
+            <div><i class="fa-brands fa-instagram mt-2   p-3 bg-red-600 text-3xl py-2  text-white rounded-[50%]"></i></div>
+            <div class="flex flex-col text-white">
+                <div class="text-2xl font-bold">Instagram</div>
+                <div>Visit Instagram</div>
+                <div class="font-bold underline py-2">ADD NOW</div>
+            </div>
+        </div>
+    </a>
+
+</div>
+
+
+    </div>
+    {% endblock content %}

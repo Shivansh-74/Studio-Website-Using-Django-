@@ -1,0 +1,32 @@
+from django.contrib import admin
+from django.urls import path
+from . import views as v
+urlpatterns = [
+    path('',v.HomeView,name='home'),
+    path('about',v.AboutView,name='about'),
+    path('wedding',v.WeddingView,name='wedding'),
+    path('birthday',v.BirthdayView,name='birthday'),
+    path('party',v.PartyView,name='party'),
+    path('haldi',v.HaldiView,name='haldi'),
+    path('gallery',v.GalleryView,name='gallery'),
+    path('contact',v.Contact,name='contact'),
+    path('adminProfile',v.AdminView,name='adminProfile'),
+    path('blog',v.BlogView,name='blog'),
+    path('event',v.EventView,name='event'),
+    path('blogCreate',v.BlogViewCreate,name='blogCreate'),
+    path('blogDelete/<int:id>',v.BlogDelete,name='blogDelete'),
+    path('eventCreate',v.EventViewCreate,name='eventCreate'),
+    path('eventDelete/<int:id>',v.EventDelete,name='eventDelete'),
+    path('homeEdit/<int:id>/',v.HomeViewEdit,name='homeEdit'),
+    path('aboutEdit/<int:id>/',v.AboutViewEdit,name='aboutEdit'),
+    path('weddingEdit',v.WeddingViewEdit,name='weddingEdit'),
+    path('weddingDelete/<int:id>/',v.WeddingDelete,name='weddingDelete'),
+    path('birthdayEdit',v.BirthdayViewEdit,name='birthdayEdit'),
+    path('birthdayDelete/<int:id>/',v.BirthdayDelete,name='birthdayDelete'),
+    path('partyEdit',v.PartyViewEdit,name='partyEdit'),
+    path('partyDelete/<int:id>/',v.PartyDelete,name='partyDelete'),
+    path('haldiEdit',v.HaldiViewEdit,name='haldiEdit'),
+    path('haldiDelete/<int:id>/',v.HaldiDelete,name='haldiDelete'),
+    path('contactForm/<int:id>/',v.contactDelete,name='contactForm'),
+    path('subs/<int:id>/',v.SubsDelete,name='subs'),
+]

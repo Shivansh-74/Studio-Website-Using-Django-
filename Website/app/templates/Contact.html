@@ -1,0 +1,45 @@
+{% extends "NavbarandFooter.html" %}
+{% block content %}
+<div class="about contact-form w-full  flex flex-col justify-center items-center px-4 ">
+    <div class="map md:w-[900px] w-[100%] h-[500px] flex flex-col justify-center items-center my-6 py-4">
+        <h1 class="text-3xl font-bold"></h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14671.41915988496!2d79.92358157928099!3d23.175499351470744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981ae14d67e730b%3A0x56934edfbd944c86!2sStudio%20Laxmi!5e0!3m2!1sen!2sin!4v1734331545231!5m2!1sen!2sin" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="invert	"></iframe>
+    </div>
+    <div class="form w-full max-w-[700px] h-auto p-6 rounded shadow text-white">
+        <div class="flex flex-col mb-6">
+            <h1 class="text-3xl md:text-5xl font-bold text-center py-2">Get In Touch</h1>
+            <p class="text-center py-2 text-sm md:text-base">Contact us for a great photography session & beautiful captured moments</p>
+        </div>
+        <div class="w-full">
+            <form action="" method="post" >
+                {% csrf_token %}
+                <div class="flex flex-col md:flex-row gap-4 py-3">
+                    <input type="text" placeholder="Name*" class="input w-full md:w-1/2 h-[40px] px-2" name="name">
+                    <input type="email" placeholder="Email*" class="input w-full md:w-1/2 h-[40px] px-2" name="email">
+                </div>
+                <div class="flex py-3">
+                    <input type="text" placeholder="Subject*" class="input w-full h-[40px] px-2" name="subject">
+                </div>
+                <div class="flex py-3">
+                    <input type="number" placeholder="Number*" class="input w-full h-[40px] px-2" name="phone">
+                </div>
+                <div class="flex py-3">
+                    <textarea id="" class="input w-full h-[100px] px-2" placeholder="Message" name="msg"></textarea>
+                </div>
+                <div class="w-full flex items-center justify-center">
+                    <button type="submit" class="py-2 px-6 bg-red-700 text-white rounded hover:bg-red-600 transition">Submit</button>
+                </div>
+            </form>
+            {% if messages %}
+    <div>
+        {% for message in messages %}
+            <div class="p-4 rounded {% if message.tags == 'success' %}bg-green-500 text-white{% elif message.tags == 'error' %}bg-red-500 text-white{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}
